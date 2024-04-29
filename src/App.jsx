@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import loader from "./assets/loader.svg"
 import browser from "./assets/browser.svg"
 import "./App.css"
-const APIKEY = import.meta.env.VITE_WEATHER_API_KEY
+const APIKEY = "da78b71f-2426-4607-a741-d9d015ef837d"
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
