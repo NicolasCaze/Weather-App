@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import loader from "./assets/loader.svg"
 import browser from "./assets/browser.svg"
 import "./App.css"
-const APIKEY = "da78b71f-2426-4607-a741-d9d015ef837d"
+const APIKEY = import.meta.env.VITE_WEATHER_API_KEY
 
 function App() {
   const [weatherData, setWeatherData] = useState(null)
@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch(`http://api.airvisual.com/v2/nearest_city?key=${APIKEY}`)
+    fetch(`https://api.airvisual.com/v2/nearest_city?key=${APIKEY}`)
     .then(response => {
       console.log(response);
       // 400 - 499 : Erreur clients 
